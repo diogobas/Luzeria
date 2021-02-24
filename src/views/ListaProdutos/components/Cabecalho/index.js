@@ -1,5 +1,14 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import {
+  COR_DE_FUNDO,
+  FONT_FAMILY_BOLD,
+  FONT_FAMILY_REGULAR,
+  SIZE_MEDIUM,
+  SIZE_XX_LARGE,
+  SIZE_X_LARGE,
+  WHITE,
+} from '../../../../styles/styles';
 
 const Cabecalho = () => {
   return (
@@ -25,12 +34,12 @@ const Cabecalho = () => {
 
 const styles = StyleSheet.create({
   containerDescricao: {
-    paddingHorizontal: 24,
+    paddingHorizontal: SIZE_X_LARGE,
   },
   containerSacola: {
-    backgroundColor: '#FFF',
+    backgroundColor: WHITE,
     padding: 18,
-    borderRadius: 30,
+    borderRadius: SIZE_XX_LARGE,
   },
   containerTexto: {
     flexDirection: 'row',
@@ -41,12 +50,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: 16,
+    paddingVertical: SIZE_MEDIUM,
     paddingHorizontal: 6,
   },
   imagem: {
-    height: 30,
-    width: 30,
+    height: SIZE_XX_LARGE,
+    width: SIZE_XX_LARGE,
   },
   separador: {
     borderWidth: 0.5,
@@ -54,15 +63,15 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   textoDescricao: {
-    padding: 24,
-    backgroundColor: '#F4F0F4',
-    fontSize: 16,
-    fontFamily: 'OpenSans-Regular',
+    padding: SIZE_X_LARGE,
+    backgroundColor: COR_DE_FUNDO,
+    fontSize: SIZE_MEDIUM,
+    fontFamily: FONT_FAMILY_REGULAR,
     color: '#A1A5AA',
   },
   title: {
-    fontFamily: 'OpenSans-Bold',
-    fontSize: 28,
+    fontFamily: FONT_FAMILY_BOLD,
+    fontSize: SIZE_XX_LARGE,
   },
 });
 

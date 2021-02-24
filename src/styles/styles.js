@@ -14,6 +14,7 @@ export const FONT_FAMILY_BOLD = 'OpenSans-Bold';
 export const FONT_FAMILY_EXTRA_BOLD = 'OpenSans-ExtraBold';
 
 // MEDIDAS
+export const SIZE_XXX_LARGE = 36;
 export const SIZE_XX_LARGE = 30;
 export const SIZE_X_LARGE = 24;
 export const SIZE_LARGE = 20;

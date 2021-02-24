@@ -1,5 +1,6 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import Sacola from '../../../../components/sacola';
 import {
   COR_DE_FUNDO,
   FONT_FAMILY_BOLD,
@@ -7,7 +8,6 @@ import {
   SIZE_MEDIUM,
   SIZE_XX_LARGE,
   SIZE_X_LARGE,
-  WHITE,
 } from '../../../../styles/styles';
 
 const Cabecalho = () => {
@@ -15,12 +15,7 @@ const Cabecalho = () => {
     <>
       <View style={styles.containerTitle}>
         <Text style={styles.title}>Lighteria</Text>
-        <View style={styles.containerSacola}>
-          <Image
-            source={require('../../../../assets/images/icone-sacola.png')}
-            style={styles.imagem}
-          />
-        </View>
+        <Sacola />
       </View>
       <View style={styles.containerDescricao}>
         <View style={styles.separador} />
@@ -36,11 +31,6 @@ const styles = StyleSheet.create({
   containerDescricao: {
     paddingHorizontal: SIZE_X_LARGE,
   },
-  containerSacola: {
-    backgroundColor: WHITE,
-    padding: 18,
-    borderRadius: SIZE_XX_LARGE,
-  },
   containerTexto: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -52,10 +42,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: SIZE_MEDIUM,
     paddingHorizontal: 6,
-  },
-  imagem: {
-    height: SIZE_XX_LARGE,
-    width: SIZE_XX_LARGE,
   },
   separador: {
     borderWidth: 0.5,

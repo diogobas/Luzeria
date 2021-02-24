@@ -5,6 +5,7 @@ import {
   Image,
   ImageBackground,
   StyleSheet,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import {
@@ -25,10 +26,12 @@ export const Background = () => {
         source={imgSrc}
         style={styles.imagemFundo}>
         <View style={styles.headerContainer}>
-          <Image
-            source={require('../../../../assets/images/flecha-esquerda.png')}
-            style={styles.imagemSeta}
-          />
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Image
+              source={require('../../../../assets/images/flecha-esquerda.png')}
+              style={styles.imagemSeta}
+            />
+          </TouchableOpacity>
           <View style={styles.containerSacola}>
             <Sacola />
           </View>
@@ -40,7 +43,7 @@ export const Background = () => {
 
 const styles = StyleSheet.create({
   bgContainer: {
-    flex: 1.5,
+    flex: 6,
   },
   imagemFundo: {
     width: Dimensions.get('window').width,

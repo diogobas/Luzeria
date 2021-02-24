@@ -7,13 +7,31 @@ import {
   WHITE,
 } from '../../../../styles/styles';
 
-export const Item = ({imagem, titulo}) => {
+export const Item = ({
+  imagem,
+  titulo,
+  estudio,
+  itemDesc,
+  itemName,
+  preco,
+  id,
+}) => {
   const navigation = useNavigation();
 
   return (
     <TouchableOpacity
       style={styles.containerItem}
-      onPress={() => navigation.push('DetalhesProduto')}>
+      onPress={() =>
+        navigation.push('DetalhesProduto', {
+          itemDesc,
+          imagem,
+          estudio,
+          titulo,
+          preco,
+          id,
+          itemName,
+        })
+      }>
       <Image source={imagem} style={styles.imagem} resizeMode="contain" />
       <Text style={styles.texto}>{titulo}</Text>
     </TouchableOpacity>

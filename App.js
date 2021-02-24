@@ -4,6 +4,7 @@ import ListaProdutos from './src/views/ListaProdutos';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {COR_DE_FUNDO} from './src/styles/styles';
+import {DetalhesProduto} from './src/views/DetalhesProduto';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,11 @@ const App = () => {
           <Stack.Screen
             name="ListaProdutos"
             component={ListaProdutos}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="DetalhesProduto"
+            component={DetalhesProduto}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {
   FONT_FAMILY_SEMI_BOLD,
   SIZE_SMALL,
@@ -7,11 +8,15 @@ import {
 } from '../../../../styles/styles';
 
 export const Item = ({imagem, titulo}) => {
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.containerItem}>
+    <TouchableOpacity
+      style={styles.containerItem}
+      onPress={() => navigation.push('DetalhesProduto')}>
       <Image source={imagem} style={styles.imagem} resizeMode="contain" />
       <Text style={styles.texto}>{titulo}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

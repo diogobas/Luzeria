@@ -20,7 +20,7 @@ export const Checkout = () => {
   const {itensCheckout} = useContext(DataContext);
 
   const valorTotal = itensCheckout.reduce(
-    (acc, atual) => acc + atual.quantidade + atual.preco,
+    (acc, atual) => acc + atual.quantidade * atual.preco,
     0,
   );
 

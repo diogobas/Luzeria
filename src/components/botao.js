@@ -28,5 +28,6 @@ const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY_SEMI_BOLD,
     fontSize: SIZE_MEDIUM,
     color: WHITE,
+    textAlign: 'center',
   },
 });
